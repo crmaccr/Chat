@@ -133,6 +133,9 @@ public class Main extends JFrame implements ActionListener {
                     //by creating the new thread, it will check if port is in use and check for username already taken
                     mainThread = new hostThread(port, username, this, 500);
                     }
+                    else{
+                  	  isError = true;
+                    }
                 }
 
                 catch(NumberFormatException nfe)
@@ -165,6 +168,9 @@ public class Main extends JFrame implements ActionListener {
                     //by creating the new thread, it will check if port is in use and check for username already taken
                      mainThread = new joinThread(port, host, username, 500, this);
                     }
+                  else{
+                	  isError = true;
+                  }
                
                 }
                 catch(usernameTaken ut)
